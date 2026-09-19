@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Precius Jia Sabado | Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --pink: #e88fa9;
+    --dark-pink: #c96886;
+    --light-pink: #fce8ee;
+    --soft-pink: #fff5f7;
+    --cream: #fffaf9;
+    --text: #49353b;
+    --gray: #806d73;
+    --white: #ffffff;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: var(--soft-pink);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section {
+    padding: 100px 8%;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--dark-pink);
+}
+
+.logo span {
+    color: var(--pink);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--dark-pink);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 8% 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+    background:
+        radial-gradient(circle at 80% 20%, #f7c7d5 0%, transparent 25%),
+        linear-gradient(135deg, #fff7f8, #fce6ed);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.welcome {
+    color: var(--dark-pink);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(45px, 6vw, 78px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--dark-pink);
+}
+
+.description {
+    max-width: 520px;
+    color: var(--gray);
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    color: white;
+    background: var(--dark-pink);
+    box-shadow: 0 10px 25px rgba(201, 104, 134, 0.25);
+}
+
+.btn.primary:hover {
+    background: #b85675;
+    transform: translateY(-3px);
+}
+
+.btn.secondary {
+    color: var(--dark-pink);
+    border: 2px solid var(--pink);
+    background: rgba(255,255,255,0.5);
+}
+
+.btn.secondary:hover {
+    background: var(--pink);
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image {
+    position: relative;
+    width: 430px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-circle {
+    width: 470px;
+    height: 480px;
+    border-radius: 50%;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 25px 60px rgba(164, 83, 108, 0.18);
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.flower {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--dark-pink);
+    font-size: 55px;
+    transform: rotate(-20deg);
+}
+
+.sparkle {
+    position: absolute;
+    color: var(--pink);
+    font-size: 35px;
+}
+
+.sparkle-one {
+    top: 20px;
+    right: 30px;
+}
+
+.sparkle-two {
+    top: 100px;
+    left: 10px;
+    font-size: 25px;
+}
+
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    color: var(--dark-pink);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: var(--cream);
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    padding: 35px;
+    background: white;
+    border-radius: 25px;
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(150, 87, 105, 0.08);
+
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: var(--light-pink);
+    color: var(--dark-pink);
+
+    font-size: 25px;
+}
+
+.about-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    background: #fce8ee;
+}
+
+.skill-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    font-weight: 600;
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 20px;
+    background: var(--dark-pink);
+}
+
+.html {
+    width: 85%;
+}
+
+.css {
+    width: 80%;
+}
+
+.creativity {
+    width: 90%;
+}
+
+.communication {
+    width: 85%;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    background: var(--cream);
+}
+
+.project-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    position: relative;
+    padding: 35px;
+    min-height: 280px;
+
+    background: white;
+    border: 1px solid #f4d9e0;
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(150, 87, 105, 0.1);
+}
+
+.project-number {
+    color: var(--pink);
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.project-card a {
+    color: var(--dark-pink);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: linear-gradient(135deg, #f8cbd8, #fce7ed);
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-box > p:first-child {
+    color: var(--dark-pink);
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.contact-box h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.contact-box p {
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #49353b;
+    color: white;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 130px;
+    }
+
+    .hero-image {
+        width: 330px;
+        height: 330px;
+    }
+
+    .image-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .about-content,
+    .project-container {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-image {
+        width: 280px;
+        height: 280px;
+    }
+
+    .image-circle {
+        width: 235px;
+        height: 235px;
+    }
+
+    .section {
+        padding: 75px 6%;
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+    }
+
+    .contact-box h2 {
+        font-size: 38px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">PJS<span>.</span></div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="welcome">WELCOME TO MY PORTFOLIO ♡</p>
+
+            <h1>
+                Hi, I'm <br>
+                <span>Precius Jia Sabado</span>
+            </h1>
+
+            <p class="description">
+                A Grade 11 student from Gonzaga National High School,
+                passionate about learning, creativity, and discovering
+                new things.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn primary">Explore</a>
+                <a href="https://canva.link/f0a81xlnww4d3xr" class="btn secondary" download>Resume</a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <!-- Replace profile.jpg with your own picture -->
+            <div class="image-circle">
+                <img src="profile.png" alt="Precius Jia Sabado">
+            </div>
+
+            <div class="flower">✿</div>
+            <div class="sparkle sparkle-one">✦</div>
+            <div class="sparkle sparkle-two">✧</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+
+        <div class="section-title">
+            <p>GET TO KNOW ME</p>
+            <h2>About Me</h2>
+        </div>
+
+        <div class="about-content">
+
+            <div class="about-card">
+                <div class="icon">♡</div>
+                <h3>Who am I?</h3>
+                <p>
+                    My name is <strong>Precius Jia Sabado</strong>.
+                    I am currently a Grade 11 student studying at
+                    Gonzaga National High School.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <div class="icon">✦</div>
+                <h3>My Goal</h3>
+                <p>
+                    I want to continue improving my skills, gaining
+                    knowledge, and exploring opportunities that will
+                    help me grow personally and academically.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <div class="icon">♡</div>
+                <h3>My Interests</h3>
+                <p>
+                    I enjoy learning about technology, creating
+                    designs, working on projects, and exploring
+                    creative ideas.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+
+        <div class="section-title">
+            <p>WHAT I CAN DO</p>
+            <h2>My Skills</h2>
+        </div>
+
+        <div class="skill-container">
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>HTML</span>
+                    <span>85%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar html"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>WORD</span>
+                    <span>80%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar css"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>Creativity</span>
+                    <span>90%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar creativity"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>Communication</span>
+                    <span>85%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar communication"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>PPT</span>
+                    <span>85%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar communication"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>EXCEL</span>
+                    <span>75%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar communication"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+
+        <div class="section-title">
+            <p>MY RECENT WORK</p>
+            <h2>My Projects</h2>
+        </div>
+
+        <div class="project-container">
+
+            <div class="project-card">
+                <div class="project-number">01</div>
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A personal website created using HTML and CSS
+                    to introduce myself, my skills, and my projects.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-number">02</div>
+                <h3>School Project</h3>
+                <p>
+                    I have worked on different schoool projects involving research,presentation,dance performances and community activities such as clean drive.
+                    These projects helped me develop me creativity,communication,and teamwork skills.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-number">03</div>
+                <h3>Creative Design</h3>
+                <p>
+                    A design project where I explored colors,
+                    layouts, creativity, and visual presentation.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+
+        <div class="contact-box">
+
+            <p>LET'S CONNECT</p>
+
+            <h2>Thank you for visiting<br>my portfolio! ♡</h2>
+
+            <p>
+                Feel free to connect with me and learn more
+                about my journey as a student.
+            </p>
+
+            <a href="#" class="btn primary">
+                 Email: preciousjiasabado12@gmail.com
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Precius Jia Sabado.</p>
+    </footer>
+
+</body>
+</html>
